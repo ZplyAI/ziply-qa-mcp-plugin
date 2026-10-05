@@ -1,0 +1,44 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ziply",
+  "version": "0.2.0",
+  "description": "Find what to write from your Ziply topic queue, write blog posts, pages, eBooks, social posts and Reddit discussions in your brand’s voice from your Ziply brand context, and save them to Ziply Content Factory as drafts.",
+  "author": {
+    "name": "Ziply",
+    "email": "support@ziply.ai",
+    "url": "https://ziply.ai"
+  },
+  "homepage": "https://ziply.ai",
+  "keywords": [
+    "ziply",
+    "content-marketing",
+    "brand-voice",
+    "blog",
+    "linkedin",
+    "reddit"
+  ],
+  "extensions": {
+    "com.openai": {
+      "apps": "./.app.json",
+      "interface": {
+        "displayName": "Ziply",
+        "shortDescription": "On-brand content from your Ziply brand context, saved to Ziply as drafts",
+        "longDescription": "Use your Ziply brand context (brand profile and voice, offerings, personas, pillars and clusters, competitors, digital twins) and your ranked topic queue to write blog posts, pages, eBooks, social posts and Reddit discussions, then save them as drafts in Ziply Content Factory for review.",
+        "developerName": "Ziply",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://ziply.ai",
+        "privacyPolicyURL": "https://ziply.ai/privacy",
+        "termsOfServiceURL": "https://ziply.ai/terms",
+        "defaultPrompt": [
+          "Use Ziply to find what we should write about next.",
+          "Use Ziply to write a LinkedIn post on our top topic and save it as a draft."
+        ],
+        "brandColor": "#4F46E5"
+      }
+    }
+  }
+}

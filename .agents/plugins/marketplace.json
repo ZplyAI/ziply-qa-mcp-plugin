@@ -1,0 +1,20 @@
+{
+  "name": "ziply-qa",
+  "interface": {
+    "displayName": "Ziply (QA)"
+  },
+  "plugins": [
+    {
+      "name": "ziply",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ziply"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

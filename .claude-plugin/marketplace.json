@@ -1,0 +1,15 @@
+{
+  "name": "ziply-qa",
+  "description": "Ziply plugin for the Ziply QA environment",
+  "owner": {
+    "name": "Ziply",
+    "email": "support@ziply.ai"
+  },
+  "plugins": [
+    {
+      "name": "ziply",
+      "source": "./plugins/ziply",
+      "description": "Find what to write from your Ziply topic queue, write blog posts, pages, eBooks, social posts and Reddit discussions in your brand’s voice from your Ziply brand context, and save them to Ziply Content Factory as drafts."
+    }
+  ]
+}

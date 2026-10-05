@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "ziply": {
+      "type": "streamable-http",
+      "url": "https://oboe-shaft-send.ngrok-free.dev/mcp"
+    }
+  }
+}

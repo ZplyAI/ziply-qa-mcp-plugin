@@ -1,0 +1,19 @@
+{
+  "name": "ziply",
+  "version": "0.2.0",
+  "description": "Find what to write from your Ziply topic queue, write blog posts, pages, eBooks, social posts and Reddit discussions in your brand’s voice from your Ziply brand context, and save them to Ziply Content Factory as drafts.",
+  "author": {
+    "name": "Ziply",
+    "email": "support@ziply.ai",
+    "url": "https://ziply.ai"
+  },
+  "homepage": "https://ziply.ai",
+  "keywords": [
+    "ziply",
+    "content-marketing",
+    "brand-voice",
+    "blog",
+    "linkedin",
+    "reddit"
+  ]
+}

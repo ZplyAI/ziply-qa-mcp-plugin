@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "ziply": {
+      "type": "http",
+      "url": "https://oboe-shaft-send.ngrok-free.dev/mcp"
+    }
+  }
+}
