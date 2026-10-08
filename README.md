@@ -27,7 +27,8 @@ your Ziply account. Ask "Is Ziply connected?" to check.
 plugins/ziply/
 ├── .claude-plugin/plugin.json     plugin name, version and description
 ├── .mcp.json                      the Ziply connection (MCP server URL)
-├── plugin.json, mcp.json, .app.json   the same, for ChatGPT
+├── plugin.json, mcp.json          the same, for ChatGPT
+├── assets/icon.png                ChatGPT icon
 ├── skills/                        7 skills: setup, find topics, brief, long-form, social, Reddit, save
 └── commands/                      /ziply:status, topics, brief, social, reddit, push
 ```

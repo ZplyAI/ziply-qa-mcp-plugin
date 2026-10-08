@@ -1,7 +1,7 @@
 {
   "name": "ziply-qa",
   "interface": {
-    "displayName": "Ziply (QA)"
+    "displayName": "Ziply QA"
   },
   "plugins": [
     {
