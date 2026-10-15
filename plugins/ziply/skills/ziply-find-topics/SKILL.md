@@ -11,6 +11,7 @@ Ziply ranks topics by evidence: what buyers ask in sales conversations, what the
 
 1. **Search the queue.** Call `search_topics` with anything the user specified: words from the subject (`query`), a pillar (use `list_pillars` to match a name to its `pillarId`), or a source (`Sales Intelligence`, `Media Intelligence`, `AI Visibility Gap`, `Manual` for the team's own plans). Default to the top 10 by score.
 2. **Present the topics.** For each, give the title, where it came from, and one line on why it ranks where it does — its score, importance and urgency, or the strongest part of its score breakdown from `get_topic_brief` when the user wants detail. Say when content has already been written from a topic (`isPostCreated`). Keep the list easy to scan.
+   When the user asks for gaps (what the brand hasn't covered), check the top topics against `search_content`: a topic with no close blog or eBook is a gap; one with close coverage may need a refresh rather than a new piece.
 3. **Be honest about ranking.** A topic with a `null` score hasn't been scored by Ziply yet. List those separately, saying they're unscored, rather than mixing them into the ranking.
 4. **Offer the next step.** Ask which topic the user wants, and offer a brief, to go straight to writing, or to start with social posts or a Reddit discussion.
 

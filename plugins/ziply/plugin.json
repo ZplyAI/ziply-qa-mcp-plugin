@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ziply",
-  "version": "0.2.1",
-  "description": "Ziply QA environment. Find what to write from your Ziply topic queue, write blog posts, pages, eBooks, social posts and Reddit discussions in your brand’s voice from your Ziply brand context, and save them to Ziply Content Factory as drafts.",
+  "version": "0.3.0",
+  "description": "Ziply QA environment. Find what to write from your Ziply topic queue, write blog posts, pages, eBooks, social posts and Reddit discussions in your brand’s voice from your Ziply brand context, save them to Ziply Content Factory as drafts, and find and update the blogs and eBooks already saved there.",
   "author": {
     "name": "Ziply",
     "email": "support@ziply.ai",
@@ -22,7 +22,7 @@
       "interface": {
         "displayName": "Ziply QA",
         "shortDescription": "On-brand drafts saved to Ziply",
-        "longDescription": "Use your Ziply brand context (brand profile and voice, offerings, personas, pillars and clusters, competitors, digital twins) and your ranked topic queue to write blog posts, pages, eBooks, social posts and Reddit discussions, then save them as drafts in Ziply Content Factory for review.",
+        "longDescription": "Use your Ziply brand context (brand profile and voice, offerings, personas, pillars and clusters, competitors, digital twins) and your ranked topic queue to write blog posts, pages, eBooks, social posts and Reddit discussions, then save them as drafts in Ziply Content Factory for review. It also finds, reads and updates the blogs and eBooks already saved in Ziply.",
         "developerName": "Ziply",
         "category": "Productivity",
         "capabilities": [
@@ -37,7 +37,8 @@
         "termsOfServiceURL": "https://www.ziply.ai/terms-of-use",
         "defaultPrompt": [
           "Use Ziply to find what we should write about next.",
-          "Use Ziply to write a LinkedIn post on our top topic and save it as a draft."
+          "Use Ziply to write a LinkedIn post on our top topic and save it as a draft.",
+          "Use Ziply to find what we have already written about this topic."
         ],
         "brandColor": "#4F46E5"
       }
