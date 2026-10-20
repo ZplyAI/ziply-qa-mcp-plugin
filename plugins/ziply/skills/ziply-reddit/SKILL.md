@@ -14,7 +14,7 @@ New posts only: on the brand's own profile, or new discussions in communities th
 3. **Find the idea:** a Ziply topic (`search_topics`, `get_topic_brief`) or a subject the user names.
 4. **Voice:** `get_brand_profile` for the brand's voice and restrictions; `get_digital_twin` when a named person is posting.
 5. **Draft** a title (up to 300 characters), a body in Markdown that opens a genuine discussion rather than promoting, and a suggested flair, stating who is posting. A link post carries its link; its body is optional.
-6. **Hand it over,** and offer to save it to Ziply as a Reddit post. Ziply stores the title, body, post type and link; it doesn't store the subreddit or flair yet, so remind the user to set them when publishing from Ziply. Publishing to Reddit happens in Ziply.
+6. **Hand it over,** and offer to save it to Ziply as a Reddit post. To save, follow the push skill (`ziply-push-to-ziply`): it asks the user to confirm the content holds no internal figures or buyer quotes, shows what will be saved and waits for a yes, then reports the ID, status and link Ziply returned. Ziply stores the title, body, post type and link; it doesn't store the subreddit or flair yet, so remind the user to set them when publishing from Ziply. Publishing to Reddit happens in Ziply.
 
 ## Never
 

@@ -62,7 +62,7 @@ Include one crisp, one-sentence definition of the central concept, early: "X is 
 ## 8 · Claims with sources attached
 
 - A statistic or factual claim needs its source in the same sentence (a link), or a source line directly after it. A link two paragraphs later doesn't count.
-- Sources are the topic brief's sources, the links the user gave, and pages the user asked you to use. Attribute naturally ("according to Gartner's 2025 survey…") and link.
+- Sources are the topic brief's sources, the links the user gave, pages the user asked you to use, and sources you find on the web yourself. A web source counts only once you've opened it and it says what you cite: prefer the primary source (the study, the report, the official documentation) over a page quoting it, and never cite a figure the source doesn't state. Attribute naturally ("according to Gartner's 2025 survey…") and link.
 - The brand's own prices, plan limits and offers are its terms, not claims. A comparative result ("customers save 40% versus X") is a claim and needs a source.
 - First-party data (the brand's research or usage figures) is a strong citation magnet: present it as the brand's own, with one line on how it was gathered. Only when the user or Ziply provides it.
 

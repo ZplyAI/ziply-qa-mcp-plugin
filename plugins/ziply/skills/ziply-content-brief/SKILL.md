@@ -9,7 +9,7 @@ A good brief tells the writer why the topic matters, who it's for, what evidence
 
 ## Steps
 
-1. **Find the topic.** If the user named one Ziply knows, confirm it with `search_topics`. If they described a subject, search for the closest topics and let them choose.
+1. **Find the topic.** If the user named one Ziply knows, confirm it with `search_topics`. If they described a subject, search for the closest topics and let them choose. Don't describe a topic as having no draft from `isPostCreated`: it only tracks social posts; the brief's `relatedContent` lists the drafts.
 2. **Get the brief.** Call `get_topic_brief`.
 3. **Add brand context** where it helps: `get_brand_profile`, the personas the brief names from `list_personas`, the pillar and its clusters from `list_pillars`, and `list_competitors` if competitors matter to the topic.
 4. **Check what the brand has already written** on the subject with `search_content` (blogs and eBooks), beyond the drafts written from this topic (`relatedContent`).

@@ -20,7 +20,7 @@ If the user asks for a "post" with no channel named and nothing indicating lengt
 5. **Voice and context.** `get_brand_profile` for the brand's voice (its brand guideline), restrictions and offerings; `get_digital_twin` for a person's voice; `list_personas` for the audience.
 6. **Pick the post type** for each channel from `references/post-types.md`, Ziply's standard post templates (thought leadership, how-to, data share, announcement…), and say which you used. If the user wants their own template from Ziply, ask them to paste it.
 7. **Draft.** For each channel, its own variants — written for that channel, differing in angle or opening. Label each `linkedin-v1`, `x-v2` and so on. Stay within each channel's limit: LinkedIn 3,000 characters; X 280 for a standard post (up to 25,000 only if the user asks for a long post); Instagram caption 2,200; YouTube title 100 and description 5,000.
-8. **Hand it over,** grouped by channel, saying where the style came from. The user can pick the variants they like. Offer to save them as one post.
+8. **Hand it over,** grouped by channel, saying where the style came from. The user can pick the variants they like. Offer to save them as one post. To save, follow the push skill (`ziply-push-to-ziply`): it asks the user to confirm the content holds no internal figures or buyer quotes, shows what will be saved and waits for a yes, then reports the ID, status and link Ziply returned.
 
 ## Who decides style
 

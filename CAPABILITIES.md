@@ -121,8 +121,9 @@ templates (presets) in Ziply aren't read yet: paste one if you want it followed.
 
 ## Safeguards
 
-- **Nothing invented:** no statistics, customers, quotes, credentials or sources that Ziply or you
-  didn't provide. Empty fields in Ziply are left empty, and schema markup leaves out anything Ziply
+- **Nothing invented:** no statistics, customers, quotes or credentials that Ziply or you didn't
+  provide. Sources come from Ziply, from you, or from the web, opened to confirm they say what's
+  cited, and the ones it found are listed for you to check. Empty fields in Ziply are left empty, and schema markup leaves out anything Ziply
   doesn't hold.
 - **Scores come only from Ziply:** the assistant reports the readiness score Ziply returned and
   never estimates one; social and Reddit posts aren't scored.
