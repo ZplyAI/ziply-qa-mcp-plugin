@@ -1,6 +1,6 @@
 ---
 name: ziply-refresh-content
-description: Improves, finishes or updates a blog post or eBook already saved in Ziply, such as completing a half-written draft, rewriting a section or chapter, updating outdated facts, tightening it or changing its title and SEO, by reading the current version, proposing specific edits and saving the approved ones back to the draft. Also finds and summarises what the brand has already written on a subject. Use whenever the user asks to finish, continue, edit, improve, rework, refresh, shorten, expand or fix content that's in Ziply, or asks what the company has already written about something.
+description: Improves, finishes or updates a blog post or eBook already saved in Ziply, such as completing a half-written draft, rewriting a section or chapter, updating outdated facts, tightening it, adding internal links, improving its AI-readiness findings or changing its title and SEO, by reading the current version, proposing specific edits and saving the approved ones back to the draft. Also finds and summarises what the brand has already written on a subject. Use whenever the user asks to finish, continue, edit, improve, rework, refresh, shorten, expand or fix content that's in Ziply, or asks what the company has already written about something.
 ---
 
 # Refresh existing content
@@ -16,11 +16,12 @@ Blogs and eBooks only. Pages and social posts can't be read or changed from here
 3. **Understand what it should be.** Load what it was written from: its topic brief (`get_topic_brief`, if it has a topic), the brand's voice and restrictions (`get_brand_profile`), its personas and pillar. For a blog or eBook, the write skill's method and templates apply to any new text (`ziply-write-ai-ready/references/`).
 4. **Propose edits,** not a rewrite, unless the user asks for one:
    - **To finish a draft:** continue from where it stops, following its brief and its template's remaining sections.
-   - **To improve it:** the answer first, sources attached to claims, headings buyers would ask, passages that stand alone, brand restrictions respected, links to related content (`search_content`).
+   - **To improve it:** start from its AI-readiness findings (`check_ai_readiness`, the readiness check skill's steps), then the method: the answer first, sources attached to claims, headings buyers would ask, passages that stand alone, brand restrictions respected, internal links from `suggest_internal_links` (methodology.md, section 11).
    - **To update it:** facts, figures and dates that may be out of date. Flag anything that looks stale for the user to confirm; don't replace it with figures you can't source.
    Show each edit specifically (the section, the old text and the new), and say why.
 5. **Apply what the user approves,** and nothing more.
-6. **Save** through the push skill's *Update a draft* steps: the `version` from step 2, the whole new body (or just the changed eBook chapters with `chapters`), and the user's confirmation. If the draft changed since you read it, read it again and rebase the edits; don't overwrite.
+6. **Check the result** when the edits change the body: `check_ai_readiness` on the whole new body, and give the score before and after exactly as the tool returned them. Offer links from `suggest_internal_links` for new or rewritten sections.
+7. **Save** through the push skill's *Update a draft* steps: the `version` from step 2, the whole new body (or just the changed eBook chapters with `chapters`), and the user's confirmation. If the draft changed since you read it, read it again and rebase the edits; don't overwrite.
 
 ## Questions about existing content
 
@@ -31,4 +32,4 @@ Blogs and eBooks only. Pages and social posts can't be read or changed from here
 - Rewrite beyond what the user approved.
 - Replace the author's voice with a generic one.
 - Send a body built from a truncated read, or drop chapters you didn't read.
-- Give a readiness score; there isn't one in this release.
+- Give a readiness score of your own; only the one `check_ai_readiness` returns, for the text it was given (a check of one chapter isn't the eBook's score).

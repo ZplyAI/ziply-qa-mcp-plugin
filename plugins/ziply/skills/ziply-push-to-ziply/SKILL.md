@@ -23,9 +23,10 @@ Saving puts the content where the team reviews, approves and publishes it. The s
    - **How it was written:** when the write skill's method was used, `contractId` (`blog`, `page` or `ebook`), `knowledgeVersion` (the method version in its `methodology.md`) and `templateId` (the template's key).
    - Ask the user only for **required** values that are missing: the content type, the page type, the channels.
 2. **Check what's public.** Ask the user to confirm the content holds no internal figures or quotes from their own buyers, unless they're cleared for publication. Internal documents the user shared count as internal.
-3. **Show what will be saved and ask to confirm:** title, type, topic, tags, template, and for a social post each channel with its variants.
-4. **Save** with `create_draft`, once. Each call creates a new draft. If it returns an error that names the problem, fix that and retry. If it fails without saying whether the draft was stored (Ziply unavailable or timed out), ask the user to check Content Factory before trying again, so no duplicate is created.
-5. **Report the result the tool returned:** the content ID, its status (Draft), and the link to open it in Ziply; for a social post, each channel with its variant numbers. Keep the returned `version` in case the user wants changes. The draft is saved only once the tool has returned it.
+3. **Readiness, for a blog, page or eBook.** If it wasn't checked in this conversation since its last change, offer one check first (`check_ai_readiness`, the readiness check skill's steps). Saving doesn't wait on the score: the user decides.
+4. **Show what will be saved and ask to confirm:** title, type, topic, tags, template, the readiness score if it was checked (as the tool returned it), and for a social post each channel with its variants.
+5. **Save** with `create_draft`, once. Each call creates a new draft. If it returns an error that names the problem, fix that and retry. If it fails without saying whether the draft was stored (Ziply unavailable or timed out), ask the user to check Content Factory before trying again, so no duplicate is created.
+6. **Report the result the tool returned:** the content ID, its status (Draft), and the link to open it in Ziply; for a social post, each channel with its variant numbers. Keep the returned `version` in case the user wants changes. The draft is saved only once the tool has returned it.
 
 ## Update a draft
 
@@ -84,5 +85,5 @@ After saving a blog or page, offer JSON-LD for the published page once. Build it
 - Report success before the tool returns.
 - Save or update without the user's confirmation.
 - Overwrite a newer version, or send a partial body as the whole.
-- Give a readiness score; there isn't one in this release.
+- Give a readiness score of your own; only the one `check_ai_readiness` returned, and never for a social or Reddit post.
 - Publish or send for review. This release saves drafts only; publishing happens in Ziply.

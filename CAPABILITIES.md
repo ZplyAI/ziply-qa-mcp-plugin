@@ -2,13 +2,15 @@
 
 The Ziply plugin connects Claude and ChatGPT to your Ziply workspace. The assistant reads your
 brand context, topic queue and saved blogs and eBooks from Ziply, writes content in your brand's
-voice with Ziply's writing method and templates, and saves it to Ziply Content Factory as a draft
-for your team to review. It can also update draft blogs and eBooks. It never publishes anything.
+voice with Ziply's writing method and templates, checks it against Ziply's AI-readiness rules,
+suggests links to your own pages, and saves it to Ziply Content Factory as a draft for your team
+to review. It can also update draft blogs and eBooks. It never publishes anything.
 
 ## Before you start
 
 - **Ziply plan:** Growth or Scale, with an active subscription. On other plans the plugin
-  connects but tells you the connector isn't included.
+  connects but tells you the connector isn't included. The AI-readiness check and link
+  suggestions also need Content Factory on the plan (included from Growth).
 - **Your Ziply account:** the first time you use the plugin, sign in with your Ziply account and
   allow access. The assistant then sees only your own company's data.
 - **Where it works:**
@@ -23,7 +25,10 @@ for your team to review. It can also update draft blogs and eBooks. It never pub
 | "What should we write next?" | Topics from your Ziply queue, highest opportunity score first, with where each came from: sales conversations, media and market intelligence, AI-visibility gaps or your team's plans |
 | "Brief me on this topic." | Why the topic matters, its audience, pillar and clusters, key insights and data points, source links, competitive angles, keywords and journey stage, and what you've already written on it |
 | "What have we written about pricing?" | Your saved blogs and eBooks on the subject, found by meaning, with the passages that match, their status and a link to each |
-| "Write a blog post on it." | A blog post, landing page, pillar page, cluster page or eBook in your brand's voice, on one of Ziply's templates, built from the topic's evidence, after checking what you've already written |
+| "Write a blog post on it." | A blog post, landing page, pillar page, cluster page or eBook in your brand's voice, on one of Ziply's templates, built from the topic's evidence, after checking what you've already written, with internal links and an AI-readiness check |
+| "Is this blog post AI-ready?" | Its AI-readiness score from Ziply's rules (the ones Site Audit runs on your site), each dimension's score, what blocks it, how to fix each finding, and what couldn't be measured and why |
+| "What does ZR-AEO-01 mean?" | What an AI-readiness rule checks, what passes, its severity and how to fix it |
+| "What should this link to?" | Pages on your own site that fit the content, found by meaning among the pages of your Site Audit crawl, written into the text with descriptive anchors |
 | "Finish the Pinecone draft." / "Update chapter 3 of our buyer's guide." | Specific edits to a draft blog or eBook in Ziply, saved back to the same draft once you approve them |
 | "Turn it into LinkedIn and X posts." | Posts for LinkedIn, X, Facebook, Instagram and YouTube, two versions per channel unless you ask for more, from a topic or from a blog or eBook in Ziply |
 | "Start a Reddit discussion on this." | A new Reddit post for your brand's profile or a community your team takes part in |
@@ -41,6 +46,7 @@ In Claude Cowork and Claude Code you can also type these:
 | `/ziply:topics` | Recommends what to write next |
 | `/ziply:brief <topic>` | Builds a research brief |
 | `/ziply:write <subject>` | Writes a blog post, page or eBook |
+| `/ziply:check <content>` | Checks a blog post, page or eBook against Ziply's AI-readiness rules |
 | `/ziply:refresh <content>` | Improves, finishes or updates a blog or eBook already in Ziply |
 | `/ziply:social <idea>` | Writes social posts |
 | `/ziply:reddit <idea>` | Starts a Reddit discussion |
@@ -53,11 +59,13 @@ In Claude Cowork and Claude Code you can also type these:
 | Company: plan, brand, connected blog sites | Checking the connection |
 | Brand profile: about, brand voice, differentiators, market position, offerings, restrictions | Writing on-brand; prohibited words and excluded topics are always respected |
 | Buyer personas (B2B and B2C) | Writing for a specific audience |
-| Authority pillars and content clusters | Choosing topics and tagging drafts |
+| Authority pillars and content clusters | Choosing topics, tagging drafts, and matching links |
 | Competitors, and brands AI engines mention alongside yours | Positioning and comparison content |
 | Digital twins: a person's voice guide, sample passages and voice profile | Writing in that person's voice |
 | Topic queue and topic briefs | Deciding what to write and grounding it in evidence |
 | Saved blogs and eBooks: text, outline, tags and SEO details | Avoiding repetition, linking related content, promoting it on social, and editing drafts |
+| AI-readiness rules: the rule library Site Audit scores with | Scoring content and explaining each rule |
+| Your published pages: the pages of your Site Audit crawl (their titles, descriptions, text and tags, copied and indexed by meaning every night) | Suggesting internal links |
 
 ## How it writes
 
@@ -65,6 +73,34 @@ The plugin carries Ziply's writing method and standard templates, the same ones 
 uses: 14 blog templates, 15 landing-page templates, pillar and cluster page structures, 26 eBook
 templates and the social post types per channel. It tells you which template it used. Your own
 templates (presets) in Ziply aren't read yet: paste one if you want it followed.
+
+## How it checks AI readiness
+
+- **The rules:** Ziply's rule library, the one Site Audit scores your published pages with, run
+  on the content as written. Scores run from 15 to 99 per dimension and overall, with a grade.
+- **What you get:** the overall score and how many rules were measured, each dimension, the
+  findings that block a dimension (a failed blocker caps it at 47), the findings to improve,
+  each with its fix and what the rule found, and the rules it couldn't measure and why.
+- **Drafts vs published pages:** a draft has no publish date, author or structured data yet, so
+  the rules for those fail until the page is published with them. The assistant explains these
+  instead of rewriting for them.
+- **Not measured yet:** rules that need buyer questions or first-party evidence Ziply doesn't hold
+  for your company, and the composer's publish gate.
+
+## How it suggests links
+
+- **Where the pages come from:** your Site Audit crawl, copied and indexed every night. Only
+  pages worth linking to: no noindex, error, redirected, home or legal pages, and none with too
+  little text.
+- **How they're chosen:** each section of the content is searched by meaning in your pages, so a
+  page that says the same thing in other words is found too. Up to 5 come back (10 if asked):
+  pages in the content's content cluster first, then its pillar, then the closest in meaning,
+  each with the section it fits. The assistant links the ones that fit from a descriptive phrase
+  in that section. Pages the content already links to, and its own page, are left out.
+- **How current it is:** a new crawl shows up the next day. Pages that disappear, redirect or turn
+  noindex are dropped.
+- **Without a Site Audit crawl,** or before its first nightly indexing, there are no pages to
+  suggest, and the assistant says so.
 
 ## What it saves to Ziply
 
@@ -88,6 +124,10 @@ templates (presets) in Ziply aren't read yet: paste one if you want it followed.
 - **Nothing invented:** no statistics, customers, quotes, credentials or sources that Ziply or you
   didn't provide. Empty fields in Ziply are left empty, and schema markup leaves out anything Ziply
   doesn't hold.
+- **Scores come only from Ziply:** the assistant reports the readiness score Ziply returned and
+  never estimates one; social and Reddit posts aren't scored.
+- **Links go only to your real pages:** URLs Ziply suggests or ones you give, never
+  invented and never the Content Factory editor link.
 - **It asks before saving or changing anything:** it shows what will be saved or changed and waits
   for your confirmation, and checks that the content holds no internal figures or quotes from your
   own buyers.
@@ -102,7 +142,8 @@ templates (presets) in Ziply aren't read yet: paste one if you want it followed.
 
 ## Not in this release
 
-- AI-readiness scores and checks
+- Checking a live page by its URL (paste its text or HTML instead)
+- AI-readiness scores for social and Reddit posts
 - Reading or updating pages and social posts already in Ziply (they're saved as new drafts)
 - Changing content that's in review or published (changes can be saved as a new draft)
 - Your own Ziply templates (presets) and library files

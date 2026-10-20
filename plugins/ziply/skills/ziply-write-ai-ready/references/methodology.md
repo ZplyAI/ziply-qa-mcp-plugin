@@ -1,6 +1,6 @@
 # Ziply's writing method
 
-**Method version: 2026-10-15.** Pass it as `knowledgeVersion` when saving. It follows the prompts Ziply Content Factory writes blogs, pages and eBooks with; when those prompts change, this file changes with them.
+**Method version: 2026-10-19.** Pass it as `knowledgeVersion` when saving. It follows the prompts Ziply Content Factory writes blogs, pages and eBooks with; when those prompts change, this file changes with them.
 
 AI answer engines don't rank pages; they lift passages and cite sources. A page earns citations when an engine can take a clear, self-contained, attributed answer from it. Everything below serves that, and a reader at the same time.
 
@@ -78,8 +78,9 @@ Name what the page is about (the product, concept or company) in full in the tit
 
 ## 11 · Links
 
-- Link to the brand's own related content with descriptive anchor text that says where the link goes. `search_content` finds the brand's blogs and eBooks on the subject: link the relevant ones, using their links only when the user confirms the published URL (Ziply's `openUrl` opens Content Factory, not the published page). Otherwise, suggest the links in the hand-over.
-- Never "click here", "read more" or a bare URL as anchor text.
+- Link to the brand's own related pages with descriptive anchor text that says where the link goes. `suggest_internal_links` returns the pages of the brand's site (its Site Audit crawl, indexed every night) closest in meaning to each section, pages in the same content cluster or pillar first. Link only the ones a reader of that section would actually want, each from a phrase in a sentence of the section it fits. Link only URLs from that list.
+- `search_content` finds what the brand has saved in Ziply, but its `openUrl` opens Content Factory, not the published page: never use it as a link. Link a saved piece only through its published URL from `suggest_internal_links`, or one the user confirms; otherwise suggest the link in the hand-over.
+- Never "click here", "read more" or a bare URL as anchor text, and never more links than the passage needs.
 
 ## 12 · Brand voice
 

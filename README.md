@@ -2,8 +2,9 @@
 
 The Ziply plugin for Claude and ChatGPT, pointed at the **Ziply QA environment**. It finds what to write from
 your Ziply topic queue, writes blog posts, pages, eBooks, social posts and Reddit discussions in
-your brand's voice, and saves them to Ziply Content Factory as drafts. It also finds and updates
-the blogs and eBooks already saved there. It never publishes.
+your brand's voice, checks them against Ziply's AI-readiness rules with links to your own pages, and saves them to
+Ziply Content Factory as drafts. It also finds and updates the blogs and eBooks already saved
+there. It never publishes.
 
 ## Install
 
@@ -34,9 +35,9 @@ plugins/ziply/
 ├── .mcp.json                      the Ziply connection (MCP server URL)
 ├── plugin.json, mcp.json          the same, for ChatGPT
 ├── assets/icon.png                ChatGPT icon
-├── skills/                        8 skills: setup, find topics, brief, long-form, refresh, social, Reddit, save
+├── skills/                        9 skills: setup, find topics, brief, long-form, readiness check, refresh, social, Reddit, save
 │                                  (long-form and social carry Ziply's method and templates in references/)
-└── commands/                      /ziply:status, topics, brief, write, refresh, social, reddit, push
+└── commands/                      /ziply:status, topics, brief, write, check, refresh, social, reddit, push
 ```
 
 See [CAPABILITIES.md](CAPABILITIES.md) for everything the plugin can do, what it needs, and what's not
