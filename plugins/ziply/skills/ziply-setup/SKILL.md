@@ -15,7 +15,7 @@ Ziply is the user's brand-authority platform. It holds their brand context, thei
    - **`connectorEnabled: false`.** The company's plan doesn't include the assistant connector. Say so plainly: it's available on the Growth and Scale packages, with an active subscription. Don't suggest workarounds.
    - **Connected and enabled.** Summarise in a few sentences: the company and its plan, the brand by name, any connected blog sites, and what the user can ask for.
 3. If a save later fails because the connection lacks the `content:write` permission, tell the user once: drafts can be written here, but saving or updating them in Ziply needs write access — reconnect Ziply and allow it. Until then, the push skill gives them a formatted export to paste into Ziply.
-4. If an AI-readiness tool says the plan doesn't include Content Factory, say so plainly: the readiness check and link suggestions come with Content Factory on the plan. Writing and saving still work.
+4. If an AI-readiness tool says the plan doesn't include Content Factory, say so plainly: the readiness check and link suggestions come with Content Factory on the plan. Writing and saving still work. The same goes for the library tools (`search_library_assets`, `get_library_asset`): if one says the plan doesn't include Content Factory, say so and carry on without library files.
 
 ## What the user can do
 
@@ -27,6 +27,7 @@ Keep it short and concrete:
 - **"Is this AI-ready?"** A blog post, page or eBook scored with Ziply's AI-readiness rules (the ones Site Audit uses), with what blocks it, how to fix each finding, and what each rule means.
 - **"What should this link to?"** Pages on the brand's own site to link to, found by meaning among the pages of its Site Audit crawl.
 - **"What have we already written about this?"** The brand's saved blogs and eBooks on a subject, found by meaning.
+- **"What do our files say about this?"** The case studies, reports and webinar and video transcripts uploaded to the Assets page, found by meaning and read in full, each marked internal or public. Files are read overnight, so a new upload can't be found by meaning until the next day.
 - **"Finish (or improve) the Pinecone draft."** Edits to a draft blog or eBook in Ziply, saved back after the user approves them.
 - **"Turn it into LinkedIn and X posts."** Posts for one channel or several at once — LinkedIn, X, Facebook, Instagram, YouTube — with several variants each, in the brand's voice.
 - **"Start a Reddit discussion on this topic."** A new post for the brand's Reddit profile or a community the team belongs to.

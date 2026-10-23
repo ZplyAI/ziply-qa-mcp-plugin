@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ziply",
-  "version": "0.4.0",
-  "description": "Ziply QA environment. Find what to write from your Ziply topic queue, write blog posts, pages, eBooks, social posts and Reddit discussions in your brand’s voice from your Ziply brand context, check them against Ziply’s AI-readiness rules with links to your own pages, save them to Ziply Content Factory as drafts, and find and update the blogs and eBooks already saved there.",
+  "version": "0.5.0",
+  "description": "Ziply QA environment. Find what to write from your Ziply topic queue, write blog posts, pages, eBooks, social posts and Reddit discussions in your brand’s voice from your Ziply brand context, check them against Ziply’s AI-readiness rules with links to your own pages, save them to Ziply Content Factory as drafts, find and update the blogs and eBooks already saved there, and draw on the case studies, reports and recordings in your Ziply library.",
   "author": {
     "name": "Ziply",
     "email": "support@ziply.ai",
@@ -22,7 +22,7 @@
       "interface": {
         "displayName": "Ziply QA",
         "shortDescription": "On-brand drafts saved to Ziply",
-        "longDescription": "Use your Ziply brand context (brand profile and voice, offerings, personas, pillars and clusters, competitors, digital twins) and your ranked topic queue to write blog posts, pages, eBooks, social posts and Reddit discussions, then save them as drafts in Ziply Content Factory for review. It checks content against Ziply’s AI-readiness rules, suggests links to your own pages, and finds, reads and updates the blogs and eBooks already saved in Ziply.",
+        "longDescription": "Use your Ziply brand context (brand profile and voice, offerings, personas, pillars and clusters, competitors, digital twins) and your ranked topic queue to write blog posts, pages, eBooks, social posts and Reddit discussions, then save them as drafts in Ziply Content Factory for review. It checks content against Ziply’s AI-readiness rules, suggests links to your own pages, finds, reads and updates the blogs and eBooks already saved in Ziply, and searches and reads the case studies, reports and recordings in your Ziply library.",
         "developerName": "Ziply",
         "category": "Productivity",
         "capabilities": [

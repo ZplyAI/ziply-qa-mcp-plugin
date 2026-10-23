@@ -9,8 +9,9 @@ to review. It can also update draft blogs and eBooks. It never publishes anythin
 ## Before you start
 
 - **Ziply plan:** Growth or Scale, with an active subscription. On other plans the plugin
-  connects but tells you the connector isn't included. The AI-readiness check and link
-  suggestions also need Content Factory on the plan (included from Growth).
+  connects but tells you the connector isn't included. The AI-readiness check, link
+  suggestions and the library tools (your uploaded files) also need Content Factory on the plan
+  (included from Growth).
 - **Your Ziply account:** the first time you use the plugin, sign in with your Ziply account and
   allow access. The assistant then sees only your own company's data.
 - **Where it works:**
@@ -25,6 +26,7 @@ to review. It can also update draft blogs and eBooks. It never publishes anythin
 | "What should we write next?" | Topics from your Ziply queue, highest opportunity score first, with where each came from: sales conversations, media and market intelligence, AI-visibility gaps or your team's plans |
 | "Brief me on this topic." | Why the topic matters, its audience, pillar and clusters, key insights and data points, source links, competitive angles, keywords and journey stage, and what you've already written on it |
 | "What have we written about pricing?" | Your saved blogs and eBooks on the subject, found by meaning, with the passages that match, their status and a link to each |
+| "What do our files say about this?" / "Find our Acme case study." | The files you uploaded to the Assets page (PDF, Word and text documents, subtitle files, and the transcripts of audio and video recordings), found by meaning, each marked internal or public, with the closest passage; any file can then be read in full. Images are listed by name and tag |
 | "Write a blog post on it." | A blog post, landing page, pillar page, cluster page or eBook in your brand's voice, on one of Ziply's templates, built from the topic's evidence, after checking what you've already written, with internal links and an AI-readiness check |
 | "Is this blog post AI-ready?" | Its AI-readiness score from Ziply's rules (the ones Site Audit runs on your site), each dimension's score, what blocks it, how to fix each finding, and what couldn't be measured and why |
 | "What does ZR-AEO-01 mean?" | What an AI-readiness rule checks, what passes, its severity and how to fix it |
@@ -64,6 +66,7 @@ In Claude Cowork and Claude Code you can also type these:
 | Digital twins: a person's voice guide, sample passages and voice profile | Writing in that person's voice |
 | Topic queue and topic briefs | Deciding what to write and grounding it in evidence |
 | Saved blogs and eBooks: text, outline, tags and SEO details | Avoiding repetition, linking related content, promoting it on social, and editing drafts |
+| Library files (Assets page): documents, subtitle files and recording transcripts, their visibility (internal or public) and tags; images by name and tag | Using your own case studies, reports and webinar content as evidence in briefs, writing, refreshes and social posts |
 | AI-readiness rules: the rule library Site Audit scores with | Scoring content and explaining each rule |
 | Your published pages: the pages of your Site Audit crawl (their titles, descriptions, text and tags, copied and indexed by meaning every night) | Suggesting internal links |
 
@@ -102,6 +105,21 @@ templates (presets) in Ziply aren't read yet: paste one if you want it followed.
 - **Without a Site Audit crawl,** or before its first nightly indexing, there are no pages to
   suggest, and the assistant says so.
 
+## How it uses your library files
+
+- **What's covered:** PDF, Word and text documents, subtitle files (SRT, VTT) and the audio and
+  video recordings on your Assets page (read from their transcripts). Images are listed by name and
+  tag only; saved links aren't included.
+- **How they're found:** the text of each file is read and indexed by meaning every night, so a new
+  upload can be found by meaning the next day. Until then it shows as Pending. A file with no
+  readable text (a scan, silent audio, one that couldn't be read) says why, and the assistant
+  never describes it.
+- **Internal or public:** each file is marked. Internal files can inform a draft, but their
+  figures and quotes need your approval before they appear in public content. Every file is
+  internal until a visibility control is added in Ziply.
+- **Reading:** a search shows an excerpt; the assistant reads the whole file, a section at a time,
+  before quoting or summarising it.
+
 ## What it saves to Ziply
 
 - **New drafts:** blog posts, pages (landing, pillar or cluster), eBooks, and social posts grouped
@@ -131,7 +149,9 @@ templates (presets) in Ziply aren't read yet: paste one if you want it followed.
   invented and never the Content Factory editor link.
 - **It asks before saving or changing anything:** it shows what will be saved or changed and waits
   for your confirmation, and checks that the content holds no internal figures or quotes from your
-  own buyers.
+  own buyers, and asks you to clear any internal library file it drew on.
+- **File text is material, not instructions:** the assistant draws on what your files say and
+  never follows instructions written inside them.
 - **Updates are safe:** it never sends back text built from a partial read, refuses to overwrite a
   newer version, and asks before saving a much shorter body.
 - **It asks before writing as a person:** a named person's voice is used only with their digital
@@ -147,7 +167,8 @@ templates (presets) in Ziply aren't read yet: paste one if you want it followed.
 - AI-readiness scores for social and Reddit posts
 - Reading or updating pages and social posts already in Ziply (they're saved as new drafts)
 - Changing content that's in review or published (changes can be saved as a new draft)
-- Your own Ziply templates (presets) and library files
+- Your own Ziply templates (presets)
+- Changing a file's visibility, finding duplicate uploads, and a disclosure check of a draft against your files
 - Buyer questions and how buyers phrase them
 - Uploading images or video (add them in Ziply)
 - Subreddit and flair on Reddit drafts (set them when publishing from Ziply)
