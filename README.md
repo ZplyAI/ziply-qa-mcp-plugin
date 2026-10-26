@@ -41,5 +41,4 @@ plugins/ziply/
 └── commands/                      /ziply:status, topics, brief, write, check, refresh, files, social, reddit, push
 ```
 
-See [CAPABILITIES.md](CAPABILITIES.md) for everything the plugin can do, what it needs, and what's not
-in this release.
+See [CAPABILITIES.md](CAPABILITIES.md) for everything the plugin can do and what it needs.

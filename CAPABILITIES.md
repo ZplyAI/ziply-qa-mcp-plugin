@@ -80,6 +80,8 @@ templates (presets) in Ziply aren't read yet: paste one if you want it followed.
 
 ## How it checks AI readiness
 
+- **What to send:** the content's text or HTML, pasted or from a draft in Ziply. It doesn't fetch a
+  live page by its URL.
 - **The rules:** Ziply's rule library, the one Site Audit scores your published pages with, run
   on the content as written. Scores run from 15 to 99 per dimension and overall, with a grade.
 - **What you get:** the overall score and how many rules were measured, each dimension, the
@@ -129,7 +131,8 @@ templates (presets) in Ziply aren't read yet: paste one if you want it followed.
 - **Updates:** the title, description, body and SEO details of a draft blog or eBook, or just some
   of an eBook's chapters. It reads the current version first, shows you the changes, and won't
   overwrite edits someone made in the meantime.
-- **Social channels:** LinkedIn, X, Facebook, Instagram, YouTube and Reddit.
+- **Social channels:** LinkedIn, X, Facebook, Instagram, YouTube and Reddit. A Reddit draft keeps its
+  title, body, post type and link; set the subreddit and flair when you publish it from Ziply.
 - **Saved with a new draft:** title, body, pillars, clusters, personas, offerings, use cases, journey
   stage, digital twin, topic link (blogs and social posts), source links, SEO details (blogs and
   pages), and the template and method version used.
@@ -162,16 +165,3 @@ templates (presets) in Ziply aren't read yet: paste one if you want it followed.
   separately.
 - **Reddit stays honest:** posts state the poster's affiliation with the brand, go only to
   communities your team takes part in, and are never repeated across communities.
-
-## Not in this release
-
-- Checking a live page by its URL (paste its text or HTML instead)
-- AI-readiness scores for social and Reddit posts
-- Reading or updating pages and social posts already in Ziply (they're saved as new drafts)
-- Changing content that's in review or published (changes can be saved as a new draft)
-- Your own Ziply templates (presets)
-- Changing a file's visibility, finding duplicate uploads, and a disclosure check of a draft against your files
-- Buyer questions and how buyers phrase them
-- Uploading images or video (add them in Ziply)
-- Subreddit and flair on Reddit drafts (set them when publishing from Ziply)
-- Publishing
