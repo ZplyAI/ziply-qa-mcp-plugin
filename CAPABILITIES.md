@@ -1,7 +1,7 @@
 # What the Ziply plugin can do
 
 The Ziply plugin connects Claude and ChatGPT to your Ziply workspace. The assistant reads your
-brand context, topic queue and saved blogs and eBooks from Ziply, writes content in your brand's
+brand context, topic queue, saved blogs and eBooks, and the files in your library from Ziply, writes content in your brand's
 voice with Ziply's writing method and templates, checks it against Ziply's AI-readiness rules,
 suggests links to your own pages, and saves it to Ziply Content Factory as a draft for your team
 to review. It can also update draft blogs and eBooks. It never publishes anything.
@@ -26,7 +26,7 @@ to review. It can also update draft blogs and eBooks. It never publishes anythin
 | "What should we write next?" | Topics from your Ziply queue, highest opportunity score first, with where each came from: sales conversations, media and market intelligence, AI-visibility gaps or your team's plans |
 | "Brief me on this topic." | Why the topic matters, its audience, pillar and clusters, key insights and data points, source links, competitive angles, keywords and journey stage, and what you've already written on it |
 | "What have we written about pricing?" | Your saved blogs and eBooks on the subject, found by meaning, with the passages that match, their status and a link to each |
-| "What do our files say about this?" / "Find our Acme case study." | The files you uploaded to the Assets page (PDF, Word and text documents, subtitle files, and the transcripts of audio and video recordings), found by meaning, each marked internal or public, with the closest passage; any file can then be read in full. Images are listed by name and tag |
+| "What do our files say about this?" / "Find our Acme case study." | The files you uploaded to the Assets page (PDF, Word (.docx) and text documents, subtitle files, and the transcripts of audio and video recordings), found by meaning, each marked internal or public, with the closest passage; any file can then be read in full. Images are listed by name and tag |
 | "Write a blog post on it." | A blog post, landing page, pillar page, cluster page or eBook in your brand's voice, on one of Ziply's templates, built from the topic's evidence, after checking what you've already written, with internal links and an AI-readiness check |
 | "Is this blog post AI-ready?" | Its AI-readiness score from Ziply's rules (the ones Site Audit runs on your site), each dimension's score, what blocks it, how to fix each finding, and what couldn't be measured and why |
 | "What does ZR-AEO-01 mean?" | What an AI-readiness rule checks, what passes, its severity and how to fix it |
@@ -52,6 +52,7 @@ In Claude Cowork and Claude Code you can also type these:
 | `/ziply:refresh <content>` | Improves, finishes or updates a blog or eBook already in Ziply |
 | `/ziply:social <idea>` | Writes social posts |
 | `/ziply:reddit <idea>` | Starts a Reddit discussion |
+| `/ziply:files <subject>` | Finds files in your Ziply library on a subject |
 | `/ziply:push` | Saves the content in the conversation to Ziply |
 
 ## What the assistant reads from Ziply
@@ -107,11 +108,12 @@ templates (presets) in Ziply aren't read yet: paste one if you want it followed.
 
 ## How it uses your library files
 
-- **What's covered:** PDF, Word and text documents, subtitle files (SRT, VTT) and the audio and
-  video recordings on your Assets page (read from their transcripts). Images are listed by name and
+- **What's covered:** PDF, Word (.docx) and text documents, subtitle files (SRT, VTT) and the audio and
+  video recordings (MP3, M4A, MP4) on your Assets page (read from their transcripts). Images are listed by name and
   tag only; saved links aren't included.
 - **How they're found:** the text of each file is read and indexed by meaning every night, so a new
-  upload can be found by meaning the next day. Until then it shows as Pending. A file with no
+  upload can usually be found by meaning the next day (the first run after it is switched on works
+  through older files first and can take a few nights). Until then it shows as Pending. A file with no
   readable text (a scan, silent audio, one that couldn't be read) says why, and the assistant
   never describes it.
 - **Internal or public:** each file is marked. Internal files can inform a draft, but their

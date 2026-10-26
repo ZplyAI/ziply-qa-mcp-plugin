@@ -36,8 +36,9 @@ plugins/ziply/
 ├── plugin.json, mcp.json          the same, for ChatGPT
 ├── assets/icon.png                ChatGPT icon
 ├── skills/                        9 skills: setup, find topics, brief, long-form, readiness check, refresh, social, Reddit, save
-│                                  (long-form and social carry Ziply's method and templates in references/)
-└── commands/                      /ziply:status, topics, brief, write, check, refresh, social, reddit, push
+│                                  (long-form and social carry Ziply's method and templates in references/;
+│                                  references/library.md holds the rules for library files)
+└── commands/                      /ziply:status, topics, brief, write, check, refresh, files, social, reddit, push
 ```
 
 See [CAPABILITIES.md](CAPABILITIES.md) for everything the plugin can do, what it needs, and what's not

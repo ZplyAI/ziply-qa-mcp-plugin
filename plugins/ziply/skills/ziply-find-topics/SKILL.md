@@ -13,7 +13,7 @@ Ziply ranks topics by evidence: what buyers ask in sales conversations, what the
 2. **Present the topics.** For each, give the title, where it came from, and one line on why it ranks where it does — its score, importance and urgency, or the strongest part of its score breakdown from `get_topic_brief` when the user wants detail. Keep the list easy to scan. `isPostCreated` only says a social post has been made from the topic; blogs and eBooks written from it are listed in `get_topic_brief`'s `relatedContent`. So never say a topic has no draft, or that something is published, from `isPostCreated` alone: say a post was made from it, or check the brief.
    When the user asks for gaps (what the brand hasn't covered), check the top topics against `search_content`: a topic with no close blog or eBook is a gap; one with close coverage may need a refresh rather than a new piece.
 3. **Be honest about ranking.** A topic with a `null` score hasn't been scored by Ziply yet. List those separately, saying they're unscored, rather than mixing them into the ranking.
-4. **Offer the next step.** Ask which topic the user wants, and offer a brief, to go straight to writing, or to start with social posts or a Reddit discussion.
+4. **Offer the next step.** Ask which topic the user wants, and offer a brief, to go straight to writing, or to start with social posts or a Reddit discussion. If the user wants to know what backs a topic beyond Ziply's evidence, offer to look for the company's own files on it (`search_library_assets`), following `ziply-write-ai-ready/references/library.md`.
 
 ## When the user wants ideas beyond the queue
 
